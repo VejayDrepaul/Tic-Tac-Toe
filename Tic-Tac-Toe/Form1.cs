@@ -23,6 +23,8 @@ namespace Tic_Tac_Toe
             1, 2, 3, 4, 5, 6, 7, 8, 9
         };
 
+        int[] nums = { 1, 2, 3,4, 5, 6,7, 8, 9 };
+
         void enabled_false()
         {
             button1.Enabled = false;
@@ -40,50 +42,58 @@ namespace Tic_Tac_Toe
         {
             Random random = new Random();
             int test = random.Next(options.Count);  
-            
 
             if (test == 1 && button1.Text == "")
             {
                 button1.Text = "O";
+                button1.Enabled = false;
             }
 
             if (test == 2 && button2.Text == "")
             {
                 button2.Text = "O";
+                button2.Enabled = false;
             }
 
             if (test == 3 && button3.Text == "")
             {
                 button3.Text = "O";
+                button3.Enabled = false;
             }
 
             if (test == 4 && button4.Text == "")
             {
                 button4.Text = "O";
+                button4.Enabled = false;
             }
 
             if (test == 5 && button5.Text == "")
             {
+                button5.Text = "O";
                 button5.Text = "O";
             }
 
             if (test == 6 && button6.Text == "")
             {
                 button6.Text = "O";
+                button6.Text = "O";
             }
 
             if (test == 7 && button7.Text == "")
             {
+                button7.Text = "O";
                 button7.Text = "O";
             }
 
             if (test == 8 && button8.Text == "")
             {
                 button8.Text = "O";
+                button8.Text = "O";
             }
 
             if (test == 9 && button9.Text == "")
             {
+                button9.Text = "O";
                 button9.Text = "O";
             }
 
@@ -109,6 +119,9 @@ namespace Tic_Tac_Toe
 
         private void new_game_Click(object sender, EventArgs e)
         {
+            options.Clear();
+            options.AddRange(nums);
+
             button1.Text = "";
             button1.BackColor = Color.Transparent;
 
